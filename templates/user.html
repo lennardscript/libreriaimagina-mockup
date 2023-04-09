@@ -1,12 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Librería Imagina | User</title>
-</head>
-<body>
-  <h1>Hola Usuario</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Librería Imagina | User</title>
+  </head>
+  <body>
+
+    <header class="border-b border-gray-100">
+      <div
+        class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4">
+          <button type="button" class="p-2 lg:hidden">
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+
+          <a href="/templates/user.html" class="flex">
+            <span class="sr-only">Logo</span>
+            <span class="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
+          </a>
+        </div>
+
+        <div class="flex flex-1 items-center justify-end gap-8">
+          <nav
+            class="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500"
+          >
+            <a
+              href="/templates/category.html"
+              class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700"
+            >
+              Libros
+            </a>
+          </nav>
+
+          <div class="flex items-center">
+            <div
+              class="flex items-center divide-x divide-gray-100 border-x border-gray-100"
+            >
+              <span>
+                <a
+                  href="/templates/cart.html"
+                  class="block border-b-4 border-transparent p-6 hover:border-red-700"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    />
+                  </svg>
+
+                  <span class="sr-only">Cart</span>
+                </a>
+              </span>
+
+              <span>
+                <div x-data="{ isActive: false }" class="relative">
+                  <div
+                    class="inline-flex items-center divide-x divide-gray-100 overflow-hidden rounded-md border bg-white"
+                  >
+                  <button
+                      x-on:click="isActive = !isActive"
+                      class="h-full p-2 text-gray-600">
+                  <a
+                  href="#"
+                  class="block border-b-4 border-transparent p-6 hover:border-red-700">
+                  <img src="/img/perfil.png" alt="Profile" class="h-10 w-10 rounded-full object-cover">
+                  <span class="sr-only"> Account </span>
+                </a>
+              </button>
+                    
+                  </div>
+                  <div
+                    class="absolute right-0 z-10 mt-2 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
+                    role="menu"
+                    x-cloak
+                    x-transition
+                    x-show="isActive"
+                    x-on:click.away="isActive = false"
+                    x-on:keydown.escape.window="isActive = false"
+                  >
+                    <div class="p-2">
+                      <strong class="block p-2 text-xs font-medium uppercase text-gray-400">
+                        Bienvenido Fulanito 👋
+                      </strong>
+                      <a
+                        href="#"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Perfil
+                      </a>
+
+                      <a
+                        href="/templates/historial.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Historial de compras
+                      </a>
+
+                      <a
+                        href="/templates/seguimiento.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Ver seguimiento
+                      </a>
+
+                      <a
+                        href="/templates/maintenance.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Pedir mantenimiento
+                      </a>
+                
+                      <a
+                        href="/templates/index.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Cerrar sesión
+                      </a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+
+              <span class="hidden sm:block">
+                <a
+                  href="/search"
+                  class="block border-b-4 border-transparent p-6 hover:border-red-700"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+
+                  <span class="sr-only"> Search </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="relative bg-[url(https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxpYnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)] bg-cover bg-center bg-no-repeat">
+      <div
+        class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"
+      ></div>
+
+      <div
+        class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+      >
+        <div class="max-w-xl text-center sm:text-left">
+          <h1 class="text-3xl font-extrabold sm:text-5xl">Librería Imagina</h1>
+
+          <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
+            Somos una empresa que cuenta con una amplia trayectoria en la
+            importación y comercialización, reparación y servicio técnico de
+            mantenimiento de libros. Poseemos una amplia experiencia, adquirida
+            durante años de ejercicio profesional, lo que nos permite brindar un
+            servicio de calidad, rápido y eficiente. Nuestra misión es
+            transformarnos en una librería con el más amplio catálogo de libros
+            a nivel nacional, buscamos convertirnos en una institución de
+            referencia en la venta de libros a nivel sudamericano.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4 text-center">
+            <!-- <a
+              href="/templates/team.html"
+              class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+            >
+              Equipo de desarrollo
+            </a> -->
+            <a
+              class="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
+              href="/templates/team.html"
+            >
+              <span
+                class="absolute inset-0 border border-red-600 group-active:border-red-500"
+              ></span>
+              <span
+                class="block border border-red-600 bg-red-600 px-12 py-3 transition-transform active:border-red-500 active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1"
+              >
+                Equipo de desarrollo
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <header class="text-center">
+          <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+            Libros destacados
+          </h2>
+
+          <p class="max-w-md mx-auto mt-4 text-gray-500">
+            📚 Revise nuestras categorías 📚
+          </p>
+        </header>
+
+        <ul class="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li>
+            <a
+              href="/templates/book.html"
+              class="group relative block overflow-hidden"
+            >
+              <button
+                class="absolute right-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+              >
+                <span class="sr-only">Wishlist</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </button>
+
+              <img
+                src="/img/libro-aristoteles.png"
+                alt=""
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+              />
+
+              <div class="relative border border-gray-100 bg-white p-6">
+                <span
+                  class="whitespace-nowrap bg-emerald-400 px-3 py-1.5 text-xs font-medium"
+                >
+                  New
+                </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">
+                  Aristóteles - Ética a Nicómaco
+                </h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">$25.000</p>
+                  <a
+                    class="group relative text-sm font-medium inline-block focus:outline-none focus:ring"
+                    href="/templates/cart.html"
+                  >
+                    <span
+                      class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
+                    ></span>
+
+                    <span
+                      class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+                    >
+                      Añadir al carrito
+                    </span>
+                  </a>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/templates/book.html"
+              class="group relative block overflow-hidden"
+            >
+              <button
+                class="absolute right-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+              >
+                <span class="sr-only">Wishlist</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </button>
+
+              <img
+                src="/img/franzkafka.png"
+                alt=""
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+              />
+
+              <div class="relative border border-gray-100 bg-white p-6">
+                <span
+                  class="whitespace-nowrap bg-emerald-400 px-3 py-1.5 text-xs font-medium"
+                >
+                  New
+                </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">
+                  Franz Kafka - El Castillo
+                </h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">$9.990</p>
+
+                <form class="mt-4">
+                  <a
+                    class="group relative text-sm font-medium inline-block focus:outline-none focus:ring"
+                    href="/templates/cart.html"
+                  >
+                    <span
+                      class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
+                    ></span>
+
+                    <span
+                      class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+                    >
+                      Añadir al carrito
+                    </span>
+                  </a>
+                </form>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/templates/book.html"
+              class="group relative block overflow-hidden"
+            >
+              <button
+                class="absolute right-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+              >
+                <span class="sr-only">Wishlist</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </button>
+
+              <img
+                src="/img/platon.png"
+                alt=""
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+              />
+
+              <div class="relative border border-gray-100 bg-white p-6">
+                <span
+                  class="whitespace-nowrap bg-emerald-400 px-3 py-1.5 text-xs font-medium"
+                >
+                  New
+                </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">
+                  Platón - El Banquete
+                </h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">$6.990</p>
+
+                <form class="mt-4">
+                  <a
+                    class="group relative text-sm font-medium inline-block focus:outline-none focus:ring"
+                    href="/templates/cart.html"
+                  >
+                    <span
+                      class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
+                    ></span>
+
+                    <span
+                      class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+                    >
+                      Añadir al carrito
+                    </span>
+                  </a>
+                </form>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="bg-gray-50">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="flex justify-center sm:justify-start">
+            <img class="h-8" src="/img/libros.png" alt="Logo" />
+            <h3>Librería Imagina</h3>
+          </div>
+
+          <p
+            class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right"
+          >
+            Copyright &copy; 2022. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </body>
 </html>

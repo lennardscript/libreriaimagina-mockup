@@ -9,8 +9,7 @@
   <body>
     <header class="border-b border-gray-100">
       <div
-        class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8"
-      >
+        class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
         <div class="flex items-center gap-4">
           <button type="button" class="p-2 lg:hidden">
             <svg
@@ -76,10 +75,72 @@
               </span>
 
               <span>
+                <div x-data="{ isActive: false }" class="relative">
+                  <div
+                    class="inline-flex items-center divide-x divide-gray-100 overflow-hidden rounded-md border bg-white"
+                  >
+                  <button
+                      x-on:click="isActive = !isActive"
+                      class="h-full p-2 text-gray-600">
+                  <a
+                  href="#"
+                  class="block border-b-4 border-transparent p-6 hover:border-red-700">
+                  <svg
+                    class="h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  <span class="sr-only"> Account </span>
+                </a>
+              </button>
+                    
+                  </div>
+                
+                  <div
+                    class="absolute right-0 z-10 mt-2 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
+                    role="menu"
+                    x-cloak
+                    x-transition
+                    x-show="isActive"
+                    x-on:click.away="isActive = false"
+                    x-on:keydown.escape.window="isActive = false"
+                  >
+                    <div class="p-2">
+                      <a
+                        href="/templates/login.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Iniciar sesión
+                      </a>
+                
+                      <a
+                        href="/templates/register.html"
+                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        role="menuitem"
+                      >
+                        Registrarse
+                      </a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+
+         <!--      <span>
+
                 <a
-                  href="/templates/login.html"
-                  class="block border-b-4 border-transparent p-6 hover:border-red-700"
-                >
+                  href="#"
+                  class="block border-b-4 border-transparent p-6 hover:border-red-700">
                   <svg
                     class="h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,8 +157,10 @@
                   </svg>
 
                   <span class="sr-only"> Account </span>
+                  
                 </a>
-              </span>
+              </span> -->
+
 
               <span class="hidden sm:block">
                 <a
@@ -129,8 +192,7 @@
     </header>
 
     <section
-      class="relative bg-[url(https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxpYnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)] bg-cover bg-center bg-no-repeat"
-    >
+      class="relative bg-[url(https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxpYnJvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)] bg-cover bg-center bg-no-repeat">
       <div
         class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"
       ></div>
@@ -175,6 +237,7 @@
           </div>
         </div>
       </div>
+      
     </section>
 
     <section>
@@ -403,5 +466,7 @@
     </footer>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
   </body>
 </html>
