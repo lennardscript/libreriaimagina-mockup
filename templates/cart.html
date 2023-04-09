@@ -61,7 +61,7 @@
             class="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500"
           >
             <a
-              href="/book"
+              href="/templates/category.html"
               class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700"
             >
               Libros
@@ -217,12 +217,28 @@
                 </dl>
 
                 <div class="flex justify-end">
-                  <a
-                    href="#"
+                  <button class="block py-5 px-25 text-sm font-medium">
+                    <a
+                      class="group relative inline-block focus:outline-none focus:ring"
+                      href="/templates/checkout.html"
+                    >
+                      <span
+                        class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
+                      ></span>
+
+                      <span
+                        class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+                      >
+                        Añadir al carrito
+                      </span>
+                    </a>
+                  </button>
+                  <!-- <a
+                    href="/templates/checkout.html"
                     class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
                   >
                     Checkout
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>
