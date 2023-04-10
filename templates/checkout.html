@@ -180,51 +180,24 @@
             <form class="grid grid-cols-6 gap-4">
               
               <div class="col-span-3">
-                <label
-                  for="FirstName"
-                  class="block text-xs font-medium text-gray-700"></label>
-    
-                <input
-                  type="text"
-                  class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                  placeholder="Nombre"
-                />
+                <div class="relative">
+            
+                  <input type="text" id="name" name="name" placeholder="Nombre" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                </div>
               </div>
 
               <div class="col-span-3">
-                <label
-                  for="LastName"
-                  class="block text-xs font-medium text-gray-700"></label>
-    
-                <input
-                  type="text"
-                  class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                  placeholder="Apellido"
-                />
+                <div class="relative">
+            
+                  <input type="text" id="lastname" name="lastname" placeholder="Apellido" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                </div>
               </div>
 
               <div class="col-span-6">
-                <label
-                  for="Email"
-                  class="block text-xs font-medium text-gray-700"></label>
-    
-                <input
-                  type="text"
-                  class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                  placeholder="Correo electrónico"
-                />
-              </div>
-
-              <div class="col-span-6">
-                <label
-                  for="Phone"
-                  class="block text-xs font-medium text-gray-700"></label>
-    
-                <input
-                  type="text"
-                  class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                  placeholder="Número de telefóno"
-                />
+                <div class="relative">
+            
+                  <input type="email" id="email" name="email" placeholder="Corre electrónico" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                </div>
               </div>
 
               <fieldset class="col-span-6">
@@ -233,38 +206,19 @@
                 </legend>
     
                 <div class="mt-1 -space-y-px rounded-md bg-white shadow-sm">
-                  <div>
-                    <label for="CardNumber" class="sr-only"> Card Number </label>
-    
-                    <input
-                      type="text"
-                      id="CardNumber"
-                      placeholder="Número de tarjeta"
-                      class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                    />
-                  </div>
+                  <div class="relative">
+                    <input type="number" id="cardnumber" name="cardnumber" placeholder="Número de tarjeta" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                  </div><br>
     
                   <div class="flex space-x-px">
-                    <div class="flex-1">
-                      <label for="CardExpiry" class="sr-only"> Card Expiry </label>
-    
-                      <input
-                        type="text"
-                        id="CardExpiry"
-                        placeholder="Fecha de expiración de la tarjeta"
-                        class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                      />
+                    <div class="relative">
+                      <input type="text" id="expirycard" name="expirycard" placeholder="Fecha de expiración" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
                     </div>
     
                     <div class="flex-1">
-                      <label for="CardCVC" class="sr-only"> Card CVC </label>
-    
-                      <input
-                        type="text"
-                        id="CardCVC"
-                        placeholder="CVC"
-                        class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                      />
+                      <div class="relative">
+                        <input type="text" id="cardcvc" name="cardcvc" placeholder="CVC" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -276,15 +230,9 @@
                 </legend>
 
                 <div class="mt-1 -space-y-px rounded-md bg-white shadow-sm">
-                  <div>
-                    <label for="ZIP_CodePostal" class="sr-only"> ZIP/Code Postal </label>
-    
-                    <input
-                      type="text"
-                      id="CardNumber"
-                      placeholder="ZIP/Código Postal"
-                      class="mt-1 p-2 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                    />
+                  <div class="relative">
+                    <input type="text" id="codepostal" name="codepostal" placeholder="ZIP/Código Postal" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                  </div>
                   </div>
               </fieldset>
 

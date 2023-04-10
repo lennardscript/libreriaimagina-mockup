@@ -187,78 +187,47 @@
   plugins: [require('@tailwindcss/forms')]
 -->
 
-<section class="bg-gray-100">
-  <div class="relative flex flex-wrap lg:h-screen lg:items-center">
-    <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-      <div class="mx-auto max-w-lg text-center">
-        <h1 class="text-2xl font-bold sm:text-3xl underline decoration-red-500">Solicite su mantenimiento</h1>
-        <p class="mt-4 text-gray-500">
-          Al mismo tiempo, el hecho de que seamos de propiedad total y totalmente independientes del fabricante y de otros grupos de control le brinda la confianza de que solo recomendaremos lo que sea adecuado para usted.
-        </p>
+<section class="text-gray-600 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="text-2xl font-bold sm:text-3xl underline decoration-red-500">Solicitud de mantenimiento</h1>
+      <p class="max-w-md mx-auto mt-4 text-gray-500">Al mismo tiempo, el hecho de que seamos de propiedad total y totalmente independientes del fabricante y de otros grupos de control le brinda la confianza de que solo recomendaremos lo que sea adecuado para usted.</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            
+            <input type="text" id="name" name="name" placeholder="Nombre completo" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+          </div>
         </div>
-      </div>
-
-      <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3">
-        <form action="" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 px-12">
-            <div class="relative">
-              <label class="sr-only" for="name">Nombre completo</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
-                placeholder="Nombre completo"
-                type="text"
-                id="name"
-              />
-            </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
-
-          <div class="grid grid-cols-1 gap-4 px-12">
-            <div class="relative">
-              <label class="sr-only" for="email">Correo electrónico</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
-                placeholder="Correo electrónico"
-                type="email"
-                id="email"
-              />
-            </div>
-
-          <div><br>
-            <label class="sr-only" for="message">Describa su situación</label>
-
-            <textarea
-              class="w-full rounded-lg border-gray-200 text-sm shadow p-2"
-              placeholder="Describa su situación"
-              rows="8"
-              id="message"
-            ></textarea>
-          </div><br>
-
-          <div class="mt-4">
-              <a
-                class="group relative inline-block focus:outline-none focus:ring"
-                href="/templates/user.html">
-                <span
-                  class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
-                ></span>
-
-                <span
-                  class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
-                >
-                  Enviar
-                </span>
-              </a>
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <textarea id="message" name="message" placeholder="Describa su situación" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
+        </div>
+        <div class="p-2 w-full">
+          <a
+                    class="group relative text-sm font-medium inline-block focus:outline-none focus:ring"
+                    href="/templates/cart.html"
+                  >
+                    <span
+                      class="absolute inset-0 translate-x-0 translate-y-0 bg-red-500 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
+                    ></span>
 
-          <!-- <div class="mt-4">
-            <button
-              type="submit"
-              class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
-            >
-              Enviar
-            </button>
-          </div> -->
-        </form>
+                    <span
+                      class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+                    >
+                      Añadir al carrito
+                    </span>
+                  </a>
+          <!-- <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
+        </div>
       </div>
     </div>
   </div>
